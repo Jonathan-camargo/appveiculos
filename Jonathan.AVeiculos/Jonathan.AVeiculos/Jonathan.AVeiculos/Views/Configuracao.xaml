@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jonathan.AVeiculos.Configuracao"
+             Title="{Binding Descricao}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Air Bag - " VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorAirbag}" VerticalOptions="Center"></Label>
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding TemAirbag}"></Switch>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Freios ABS - " VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorABS}" VerticalOptions="Center"></Label>
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding TemABS}"></Switch>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ar Cond - " VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorArCondicionado}" VerticalOptions="Center"></Label>
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding TemArCondicionado}"></Switch>
+            </StackLayout>
+          
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Valor do veículo: R$" VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorFormatado}" VerticalOptions="Center"></Label>
+            </StackLayout>          
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Valor Opcionais: R$" VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorOpcionaisFormatado}"  VerticalOptions="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Valor Final: R$" VerticalOptions="Center"></Label>
+                <Label Text="{Binding ValorTotalFormatado}" VerticalOptions="Center"></Label>
+            </StackLayout>
+
+            <Button Text="Agendar" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+      
+      
+    </ContentPage.Content>
+</ContentPage>

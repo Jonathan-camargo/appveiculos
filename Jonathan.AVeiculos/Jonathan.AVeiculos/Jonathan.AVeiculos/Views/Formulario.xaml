@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jonathan.AVeiculos.Formulario"
+             Title="Agendamento">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,0">
+
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalOptions="CenterAndExpand" Text="Nome"></Label>
+                <Entry VerticalOptions="CenterAndExpand" Text="{Binding Cliente.nome}" HorizontalOptions="FillAndExpand"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalOptions="CenterAndExpand" Text="Cliente"></Label>
+                <Entry VerticalOptions="CenterAndExpand" Text="{Binding Cliente.telefone}" HorizontalOptions="FillAndExpand"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalOptions="CenterAndExpand" Text="Email"></Label>
+                <Entry VerticalOptions="CenterAndExpand" Text="{Binding Cliente.email}" HorizontalOptions="FillAndExpand"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalOptions="CenterAndExpand" Text="Data: "></Label>
+                <DatePicker VerticalOptions="CenterAndExpand" Date="{Binding data}" HorizontalOptions="FillAndExpand"></DatePicker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label VerticalOptions="CenterAndExpand" Text="Hora: "></Label>
+                <TimePicker VerticalOptions="CenterAndExpand" Time="{Binding hora}"  HorizontalOptions="FillAndExpand"></TimePicker>
+            </StackLayout>
+
+            <Button Text="Confirmar agendamento" VerticalOptions="EndAndExpand">
+            </Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

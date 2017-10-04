@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Jonathan.AVeiculos"
+             x:Class="Jonathan.AVeiculos.MainPage"
+             Title="Carros">
+
+    <ListView x:Name="Lista" ItemsSource="{Binding Veiculos}" ItemTapped="Lista_ItemTapped">
+      
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label Text="{Binding Descricao}" VerticalOptions="CenterAndExpand"></Label>                            
+                            <Label Text=" - " VerticalOptions="CenterAndExpand"></Label>
+                            <Label Text="{Binding ValorFormatado}" VerticalOptions="CenterAndExpand"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        
+    </ListView>
+    
+    
+
+</ContentPage>
